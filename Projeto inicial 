@@ -1,0 +1,25 @@
+#include <avr/io.h>
+#include <stdio.h>
+
+typedef struct {
+    const int analogPin = A0;// pino A0
+    const int pwmPIN = 9; // pino 9
+    const int squarePin = 13; // pino 13
+} Variant;
+
+unsigned long previousMillis = 0;
+const unsigned long LED = 500; // 500 ms -> toggle -> 1 Hz
+int squareState = LOW;
+
+void setup(void)
+{
+    AUMUX = (1<<refs0) | (1<<adlar);
+    ADCSRA = (1<<ADEN);
+}
+int main(void)
+{
+    
+    while (1) 
+    {
+    }
+}
